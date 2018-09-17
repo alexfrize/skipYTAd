@@ -6,17 +6,14 @@
       var bigAdSkipButton = bigAdSkipButton_arr[0];
       bigAdSkipButton.click();
       console.log("skipYTAd()::bigAdSkipButton.click()")
-
     }
 
-    /* Skippes small advertisement */
-    var smallAdCloseButton_container = document.getElementsByClassName("close-padding");
+    var smallAdCloseButton_container = document.getElementsByClassName("close-padding condensed contains-svg");
     if (smallAdCloseButton_container.length !== 0) {
-      var smallAdCloseButton_button = smallAdCloseButton_container[0].getElementsByClassName("close-button")[0];
-      console.log(smallAdCloseButton_button);
-      smallAdCloseButton_button.click();
-      console.log("skipYTAd()::smallAdCloseButton_button.click()");
+      smallAdCloseButton_container[0].click();
+      console.log("skipYTAd()::smallAdCloseButton_container[0].click()");
     }
+
   }
   setInterval(skipYTAd, 2000);
   console.log("skipYTAd extention is running...");
